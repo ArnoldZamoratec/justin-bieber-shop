@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Bieber | Shop</title>
+    <meta name="description" content="Official Justin Bieber merchandise store - Shop exclusive music and merch">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#MainContent" class="skip-link">Skip to content</a>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">
+                    <a href="/">Justin Bieber | Shop</a>
+                </h1>
+                
+                <nav class="nav" aria-label="Main navigation">
+                    <ul class="nav-list">
+                        <li class="nav-item">
+                            <button class="nav-button" aria-expanded="false" aria-haspopup="true">
+                                COLLECTIONS
+                                <span class="nav-arrow">▼</span>
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#merch" class="nav-link">Merch</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#music" class="nav-link">Music</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="account-btn" aria-label="Account">
+                        <span class="account-icon">👤</span>
+                        Account
+                    </button>
+                    <button class="cart-btn" aria-label="Shopping cart" id="cartToggle">
+                        <span class="cart-icon">🛒</span>
+                        Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Your cart is empty</h2>
+                <button class="cart-close" id="cartClose" aria-label="Close cart">×</button>
+            </div>
+            <div class="cart-body">
+                <p>Time to fill up the cart</p>
+                <button class="continue-shopping-btn" id="continueShopping">Continue shopping</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="MainContent" class="main">
+        <div class="container">
+            <!-- Category Tiles -->
+            <section class="category-section">
+                <div class="category-grid">
+                    <div class="category-tile">
+                        <a href="#merch" class="category-link">
+                            <img src="https://shop.justinbiebermusic.com/cdn/shop/files/Tile-Merch-BW_cb163c29-beeb-4915-a63b-166077dfc68f.jpg?v=1668038723&width=900" 
+                                 alt="Merch collection" 
+                                 class="category-image"
+                                 loading="lazy">
+                            <h2 class="category-title">Merch</h2>
+                        </a>
+                    </div>
+                    <div class="category-tile">
+                        <a href="#music" class="category-link">
+                            <img src="https://shop.justinbiebermusic.com/cdn/shop/files/Tile-Music-BW.jpg?v=1668038724&width=900" 
+                                 alt="Music collection" 
+                                 class="category-image"
+                                 loading="lazy">
+                            <h2 class="category-title">Music</h2>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Products -->
+            <section class="products-section" id="merch">
+                <div class="products-header">
+                    <img src="https://shop.justinbiebermusic.com/cdn/shop/files/SWU-JB.png?v=1679505107&width=900" 
+                         alt="Stuck with U Collection" 
+                         class="collection-banner"
+                         loading="lazy">
+                </div>
+
+                <div class="products-grid">
+                    <!-- Product 1 -->
+                    <article class="product-card">
+                        <a href="#" class="product-link">
+                            <div class="product-images">
+                                <img src="https://shop.justinbiebermusic.com/cdn/shop/products/STUCKWITHUT-SHIRTI.png?v=1588979358&width=1100" 
+                                     alt="Stuck with U T-Shirt I - Front" 
+                                     class="product-image primary"
+                                     loading="lazy">
+                                <img src="https://shop.justinbiebermusic.com/cdn/shop/products/WHITET-SHIRTBACK_acb200c9-1e16-4109-94b5-64e36f256918.png?v=1588979359&width=1100" 
+                                     alt="Stuck with U T-Shirt I - Back" 
+                                     class="product-image secondary"
+                                     loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Stuck with U T-Shirt I</h3>
+                                <p class="product-price">$35.00</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Product 2 -->
+                    <article class="product-card">
+                        <a href="#" class="product-link">
+                            <div class="product-images">
+                                <img src="https://shop.justinbiebermusic.com/cdn/shop/products/STUCKWITHUT-SHIRTII.png?v=1588979433&width=1100" 
+                                     alt="Stuck with U T-Shirt II - Front" 
+                                     class="product-image primary"
+                                     loading="lazy">
+                                <img src="https://shop.justinbiebermusic.com/cdn/shop/products/BLACKT-SHIRTBACK_f56ce5e8-5683-4c48-a600-0fad8496d007.png?v=1588979433&width=1100" 
+                                     alt="Stuck with U T-Shirt II - Back" 
+                                     class="product-image secondary"
+                                     loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Stuck with U T-Shirt II</h3>
+                                <p class="product-price">$35.00</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Product 3 -->
+                    <article class="product-card">
+                        <a href="#" class="product-link">
+                            <div class="product-images">
+                                <img src="https://shop.justinbiebermusic.com/cdn/shop/products/STUCKWITHUWINDOWT-SHIRTI.png?v=1588979775&width=1100" 
+                                     alt="Stuck with U Window T-Shirt I - Front" 
+                                     class="product-image primary"
+                                     loading="lazy">
+                                <img src="https://shop.justinbiebermusic.com/cdn/shop/products/WHITET-SHIRTBACK_16726dcd-7d9e-4795-8bcb-e55d13bb4fb1.png?v=1588979775&width=1100" 
+                                     alt="Stuck with U Window T-Shirt I - Back" 
+                                     class="product-image secondary"
+                                     loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Stuck with U Window T-Shirt I</h3>
+                                <p class="product-price">$35.00</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Product 4 -->
+                    <article class="product-card">
+                        <a href="#" class="product-link">
+                            <div class="product-images">
+                                <img src="https://shop.justinbiebermusic.com/cdn/shop/products/STUCKWITHUWINDOWT-SHIRTII.png?v=1588979797&width=1100" 
+                                     alt="Stuck with U Window T-Shirt II - Front" 
+                                     class="product-image primary"
+                                     loading="lazy">
+                                <img src="https://shop.justinbiebermusic.com/cdn/shop/products/BLACKT-SHIRTBACK_1b492248-2e3a-4119-8eb0-0529baf567dd.png?v=1588979797&width=1100" 
+                                     alt="Stuck with U Window T-Shirt II - Back" 
+                                     class="product-image secondary"
+                                     loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Stuck with U Window T-Shirt II</h3>
+                                <p class="product-price">$35.00</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Product 5 -->
+                    <article class="product-card">
+                        <a href="#" class="product-link">
+                            <div class="product-images">
+                                <img src="https://shop.justinbiebermusic.com/cdn/shop/products/STUCKWITHUCHAIRT-SHIRTI.png?v=1588979204&width=1100" 
+                                     alt="Stuck with U Chair T-Shirt I - Front" 
+                                     class="product-image primary"
+                                     loading="lazy">
+                                <img src="https://shop.justinbiebermusic.com/cdn/shop/products/WHITET-SHIRTBACK.png?v=1588979204&width=1100" 
+                                     alt="Stuck with U Chair T-Shirt I - Back" 
+                                     class="product-image secondary"
+                                     loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Stuck with U Chair T-Shirt I</h3>
+                                <p class="product-price">$35.00</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Product 6 -->
+                    <article class="product-card">
+                        <a href="#" class="product-link">
+                            <div class="product-images">
+                                <img src="https://shop.justinbiebermusic.com/cdn/shop/products/STUCKWITHUCHAIRT-SHIRTII.png?v=1588979256&width=1100" 
+                                     alt="Stuck with U Chair T-Shirt II - Front" 
+                                     class="product-image primary"
+                                     loading="lazy">
+                                <img src="https://shop.justinbiebermusic.com/cdn/shop/products/BLACKT-SHIRTBACK.png?v=1588979256&width=1100" 
+                                     alt="Stuck with U Chair T-Shirt II - Back" 
+                                     class="product-image secondary"
+                                     loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Stuck with U Chair T-Shirt II</h3>
+                                <p class="product-price">$35.00</p>
+                            </div>
+                        </a>
+                    </article>
+
+                    <!-- Product 7 -->
+                    <article class="product-card">
+                        <a href="#" class="product-link">
+                            <div class="product-images">
+                                <img src="https://shop.justinbiebermusic.com/cdn/shop/products/STUCKWITHUJB_ARIT-SHIRTSHOT2.png?v=1588979326&width=1100" 
+                                     alt="Stuck with U Chair T-Shirt III - Front" 
+                                     class="product-image primary"
+                                     loading="lazy">
+                                <img src="https://shop.justinbiebermusic.com/cdn/shop/products/STUCKWITHUJB_ARIT-SHIRTSHOT1.png?v=1588979326&width=1100" 
+                                     alt="Stuck with U Chair T-Shirt III - Back" 
+                                     class="product-image secondary"
+                                     loading="lazy">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">Stuck with U Chair T-Shirt III</h3>
+                                <p class="product-price">$35.00</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+
+                <!-- Navigation -->
+                <div class="products-navigation">
+                    <button class="nav-btn prev-btn" aria-label="Previous products">Previous</button>
+                    <button class="nav-btn next-btn" aria-label="Next products">Next</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="js/scripts.js"></script>
+    <script src="js/cart.js"></script>
+</body>
+</html>
