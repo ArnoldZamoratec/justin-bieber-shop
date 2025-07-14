@@ -517,6 +517,30 @@ body {
     outline-offset: 4px;
 }
 
+/* Search Input */
+.search-input {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 1rem auto 2rem auto;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Highlight for search matches */
+.highlight {
+    background-color: #fffa8c;
+}
+
+/* Message when no results are found */
+.no-results {
+    text-align: center;
+    margin-top: 1rem;
+    color: #666;
+}
+
 /* Print Styles */
 @media print {
     .header,
