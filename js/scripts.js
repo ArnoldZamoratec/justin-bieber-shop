@@ -9,6 +9,7 @@ function initializeApp() {
         initializeProductInteractions();
         initializeImageLazyLoading();
         initializeErrorHandling();
+        initializeProductSearch();
     } catch (error) {
         console.error('Error initializing app:', error);
     }
@@ -225,6 +226,57 @@ function handleImageError(img) {
     }
 }
 
+// Product Search
+function initializeProductSearch() {
+    try {
+        const searchInput = document.getElementById('productSearch');
+        if (!searchInput) return;
+        searchInput.addEventListener('input', function() {
+            filterProducts(this.value);
+        });
+    } catch (error) {
+        console.error('Error initializing product search:', error);
+    }
+}
+
+function filterProducts(query) {
+    try {
+        const lowerQuery = query.toLowerCase();
+        const cards = document.querySelectorAll('.product-card');
+        let matchCount = 0;
+        cards.forEach(card => {
+            const titleEl = card.querySelector('.product-title');
+            if (!titleEl) return;
+
+            // Preserve original text for resetting highlights
+            const original = titleEl.dataset.originalTitle || titleEl.textContent;
+            titleEl.dataset.originalTitle = original;
+
+            const lowerTitle = original.toLowerCase();
+            if (lowerTitle.includes(lowerQuery)) {
+                card.style.display = '';
+                matchCount++;
+                if (query) {
+                    const regex = new RegExp(`(${query})`, 'gi');
+                    titleEl.innerHTML = original.replace(regex, '<span class="highlight">$1</span>');
+                } else {
+                    titleEl.textContent = original;
+                }
+            } else {
+                card.style.display = 'none';
+                titleEl.textContent = original;
+            }
+        });
+
+        const noResults = document.getElementById('noResultsMessage');
+        if (noResults) {
+            noResults.style.display = matchCount === 0 ? '' : 'none';
+        }
+    } catch (error) {
+        console.error('Error filtering products:', error);
+    }
+}
+
 // Utility Functions
 function debounce(func, wait) {
     let timeout;
@@ -281,6 +333,8 @@ if (typeof module !== 'undefined' && module.exports) {
         initializeApp,
         initializeNavigation,
         initializeProductInteractions,
+        initializeProductSearch,
+        filterProducts,
         handleImageError,
         debounce,
         throttle
